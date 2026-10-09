@@ -10,23 +10,36 @@ export const SKILL_GROUPS = [
   {
     category: "Frontend",
     icon: null,
-    skills: ["React", "Python", "HTML", "CSS", "Next.js", "TypeScript"],
+    skills: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
-    category: "Backend",
+    category: "Programming",
     icon: null,
-    skills: ["Node.js", "PHP", "Express"],
+    skills: ["C", "C++", "Python"],
+  },
+  {
+    category: "Tools",
+    icon: null,
+    skills: ["Git", "GitHub", "VS Code"],
   },
   {
     category: "Database",
     icon: null,
     skills: ["MySQL"],
   },
-  {
-    category: "Tools",
-    icon: null,
-    skills: ["Git"],
-  },
+];
+
+export const SKILL_SHOWCASE = [
+  { name: "HTML", type: "html5", accent: "#ef6a2d" },
+  { name: "CSS", type: "css3", accent: "#1b7fe8" },
+  { name: "TAILWIND", type: "tailwind", accent: "#30d9ff" },
+  { name: "JAVASCRIPT", type: "javascript", accent: "#f7d63a" },
+  { name: "REACT JS", type: "react", accent: "#5ec6f9" },
+  { name: "GITHUB", type: "github", accent: "#f2f4f8" },
+  { name: "NODE JS", type: "node", accent: "#8ecf52" },
+  { name: "EXPRESS JS", type: "express", accent: "#1d1d1d" },
+  { name: "MONGODB", type: "mongodb", accent: "#4caf50" },
+  { name: "VS CODE", type: "vscode", accent: "#2f88ff" },
 ];
 
 export const PROJECTS = [

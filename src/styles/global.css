@@ -1,0 +1,196 @@
+:root {
+  --bg: #0B0F17;
+  --surface: #131A26;
+  --surface-2: #1A2230;
+  --border: #232D3D;
+  --text: #EDF1F7;
+  --text-muted: #8996A8;
+  --amber: #F2A93B;
+  --amber-soft: rgba(242, 169, 59, 0.12);
+  --mint: #3ECF8E;
+  --mint-soft: rgba(62, 207, 142, 0.12);
+}
+
+[data-theme="light"] {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef1f3;
+  --border: #e1e5e7;
+  --text: #202833;
+  --text-muted: #5c6871;
+  --amber: #b85f0b;
+  --amber-soft: rgba(184, 95, 11, 0.09);
+  --mint: #187553;
+  --mint-soft: rgba(24, 117, 83, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.portfolio-root,
+.portfolio-root * {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.portfolio-root {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.portfolio-root * {
+  box-sizing: border-box;
+}
+
+.portfolio-root h1,
+.portfolio-root h2,
+.portfolio-root h3,
+.portfolio-root p {
+  margin: 0;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.section {
+  scroll-margin-top: 84px;
+}
+
+.content-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  scroll-margin-top: 84px;
+}
+
+.eyebrow {
+  color: var(--amber);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow {
+  margin-bottom: 12px !important;
+}
+
+.section-heading {
+  margin-bottom: 20px !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+}
+
+.section-intro {
+  margin-bottom: 32px;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-primary {
+  background: var(--amber);
+  color: #14100A;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #f7b957;
+}
+
+.btn-secondary {
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-muted);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+.fade-up-delay-1 {
+  animation: fadeUp 0.7s ease 0.12s both;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 440ms ease, transform 440ms ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up,
+  .fade-up-delay-1,
+  .scroll-reveal,
+  .pulse-dot {
+    animation: none;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-visible,
+  .scroll-reveal .skill-tile,
+  .scroll-reveal .project-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .skill-tile:hover,
+  .project-card:hover {
+    transform: none;
+  }
+}

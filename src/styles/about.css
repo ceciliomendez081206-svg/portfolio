@@ -1,0 +1,30 @@
+.about-description {
+  max-width: 640px;
+  margin-bottom: 28px !important;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+}
+
+.fact-badge svg {
+  color: var(--amber);
+}

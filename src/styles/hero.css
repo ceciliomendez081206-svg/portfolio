@@ -1,7 +1,7 @@
 .hero-shell {
   position: relative;
   overflow: hidden;
-  background: var(--bg);
+  background: transparent;
 }
 
 .hero-shell::before {
@@ -142,11 +142,30 @@
 }
 
 .hero-photo {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
+  transition: opacity 450ms ease;
+}
+
+.hero-photo-dark {
+  opacity: 1;
+}
+
+.hero-photo-light {
+  opacity: 0;
+}
+
+[data-theme="light"] .hero-photo-dark {
+  opacity: 0;
+}
+
+[data-theme="light"] .hero-photo-light {
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -171,6 +190,10 @@
   .hero-text-reveal {
     opacity: 1;
     animation: none;
+  }
+
+  .hero-photo {
+    transition: none;
   }
 
   .portrait-card {

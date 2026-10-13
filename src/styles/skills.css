@@ -1,7 +1,7 @@
 .skills-section {
   padding: 72px 20px 50px;
   scroll-margin-top: 84px;
-  background: var(--bg);
+  background: transparent;
 }
 
 .skills-wrapper {
@@ -42,8 +42,11 @@
   box-shadow: 0 18px 30px rgba(0,0,0,0.12);
   text-align: center;
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 360ms ease, transform 180ms ease, border-color 180ms ease;
+  transform: translateY(16px);
+  transition:
+    opacity 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 180ms ease;
 }
 
 .scroll-reveal.is-visible .skill-tile {
@@ -51,11 +54,15 @@
   transform: translateY(0);
 }
 
-.scroll-reveal.is-visible .skill-tile:nth-child(2) { transition-delay: 50ms; }
-.scroll-reveal.is-visible .skill-tile:nth-child(3) { transition-delay: 100ms; }
-.scroll-reveal.is-visible .skill-tile:nth-child(4) { transition-delay: 150ms; }
-.scroll-reveal.is-visible .skill-tile:nth-child(5) { transition-delay: 200ms; }
-.scroll-reveal.is-visible .skill-tile:nth-child(n + 6) { transition-delay: 240ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(2) { transition-delay: 55ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(3) { transition-delay: 110ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(4) { transition-delay: 165ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(5) { transition-delay: 220ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(6) { transition-delay: 275ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(7) { transition-delay: 330ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(8) { transition-delay: 385ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(9) { transition-delay: 440ms; }
+.scroll-reveal.is-visible .skill-tile:nth-child(10) { transition-delay: 495ms; }
 
 .scroll-reveal.is-visible .skill-tile:hover {
   border-color: var(--amber);

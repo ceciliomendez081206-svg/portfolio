@@ -1,4 +1,5 @@
 import profilePhoto from "../assets/profile.png";
+import lightProfilePhoto from "../assets/profile-light.png";
 
 export default function Hero() {
   return (
@@ -24,9 +25,15 @@ export default function Hero() {
         <div className="hero-visual fade-up-delay-1">
           <div className="portrait-card">
             <img
-              className="hero-photo"
+              className="hero-photo hero-photo-dark"
               src={profilePhoto}
               alt="Portrait of Cecilio Emil Mendez"
+            />
+            <img
+              className="hero-photo hero-photo-light"
+              src={lightProfilePhoto}
+              alt=""
+              aria-hidden="true"
             />
           </div>
         </div>

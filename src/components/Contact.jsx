@@ -122,9 +122,17 @@ export default function Contact() {
           </p>
         </form>
         <div className="social-links">
-          <a href="#" className="social-btn" aria-label="GitHub"><GitBranch size={18} /></a>
+          <a
+            href="https://github.com/ceciliomendez081206-svg"
+            className="social-btn"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitBranch size={18} />
+          </a>
           <a href="#" className="social-btn" aria-label="LinkedIn"><User size={18} /></a>
-          <a href="mailto:you@example.com" className="social-btn" aria-label="Email"><Mail size={18} /></a>
+          <a href="mailto:ceciliomendez081206@gmail.com" className="social-btn" aria-label="Email"><Mail size={18} /></a>
         </div>
       </div>
     </ScrollRevealSection>

@@ -44,6 +44,14 @@ export const SKILL_SHOWCASE = [
 
 export const PROJECTS = [
   {
+    title: "SMJ ProFaith Printing Services",
+    path: "~/projects/smj-profaith-printing-services",
+    status: "in-progress",
+    description:
+      "A website for SMJ ProfAith Printing Services, built to showcase the business and its printing services.",
+    stack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     title: "E-Commerce Platform",
     path: "~/projects/ecommerce-oop",
     status: "done",
